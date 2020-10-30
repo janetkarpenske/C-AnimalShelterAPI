@@ -18,7 +18,7 @@ namespace AnimalShelter.Controllers
     }
 
   [HttpGet] //Get all animals functionality
-    public ActionResult<IEnumerable<Animal>> Get(string species, string name, string breed, int age)
+    public ActionResult<IEnumerable<Animal>> Get(string species, string name, string breed, int age, int page, int size)
     {
       var query = _db.Animals.AsQueryable();
 
@@ -37,6 +37,17 @@ namespace AnimalShelter.Controllers
       if (age != 0)
       {
         query = query.Where(entry => entry.Age == age);
+      }
+      if (page != 0)
+      {
+        if (size !=0 )
+        {
+        }
+        else {
+          size = 5;
+        }
+        var entries = query.OrderBy(o => o.AnimalId).Skip((page - 1) * size).Take(size).ToList(); //finds the entries to be displayed
+        query = entries.AsQueryable();
       }
       return query.ToList();
     }
