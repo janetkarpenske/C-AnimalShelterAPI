@@ -96,7 +96,7 @@ A web API for an animal shelter. It utilizies the RESTful principles, pagination
 Explore the API endpoints in Postman or a browser. You will not be able to utilize authentication in a browser.
 
 ### Using Swagger Documentation 
-To explore the Cretaceous Park API with NSwag, launch the project using `dotnet run` with the Terminal or Powershell, and input the following URL into your browser: `http://localhost:5000/swagger`
+For full documentation and to explore the Animal Shelter API endpoints with NSwag, launch the project using `dotnet run` with the Terminal or Powershell, and input the following URL into your browser: `http://localhost:5000/swagger/index.html`
 
 
 ### Note on Pagination
