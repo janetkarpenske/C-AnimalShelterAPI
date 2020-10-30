@@ -15,10 +15,7 @@ namespace AnimalShelter
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AnimalShelterContext>(opt =>
@@ -30,7 +27,6 @@ namespace AnimalShelter
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "Janet Karpenske's Animal Shelter API", Version = "v1" });
             });
         }
-
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -39,10 +35,8 @@ namespace AnimalShelter
             }
             else
             {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
             // app.UseHttpsRedirection();
             app.UseMvc();
             app.UseSwagger();

@@ -17,16 +17,6 @@
   <medium>Created on 10/30/2020, Updated on 10/30/2020.</medium>
 </p>
 
-<!-- Project Links -->
-<p align="center">
-    <a href="https://github.com/janetkarpenske/AnimalShelter.Solution"><big>Project Docs</big></a> ·
-    <a href="https://github.com/janetkarpenske/AnimalShelter.Solution/issues"><big>Report Bug</big></a> ·
-    <a href="https://github.com/janetkarpenske/AnimalShelter.Solution/issues"><big>Request Feature</big></a>
-</p>
-
-------------------------------
-
-------------------------------
 
 ## 🌐 About the Project
 
@@ -89,27 +79,20 @@ A web API for an animal shelter. It utilizies the RESTful principles, pagination
   #### Launch the API
   1) Navigate to AnimalShelter.Solution/AnimalShelter directory using the MacOS Terminal or Windows Powershell.
   2) Run the command `dotnet run` to have access to the API in Postman or browser.
-
 ------------------------------
-
 ## 🛰️ API Documentation
 Explore the API endpoints in Postman or a browser. You will not be able to utilize authentication in a browser.
 
 ### Using Swagger Documentation 
 For full documentation and to explore the Animal Shelter API endpoints with NSwag, launch the project using `dotnet run` with the Terminal or Powershell, and input the following URL into your browser: `http://localhost:5000/swagger/index.html`
 
-
 ### Note on Pagination
 The Animal Shelter API returns a default of 5 results per page at a time.
-
 ..........................................................................................
-
 ### Endpoints
 Base URL: `https://localhost:5000`
-
 ### Animals
 Access information about animals in the animal shelter.
-
 #### HTTP Request
 ```
 GET /api/animals
@@ -118,7 +101,6 @@ GET /api/animals/{id}
 PUT /api/animals/{id}
 DELETE /api/animals/{id}
 ```
-
 #### Path Parameters
 | Parameter | Type | Default | Required | Description |
 | :---: | :---: | :---: | :---: | --- |
@@ -129,7 +111,6 @@ DELETE /api/animals/{id}
 ```
 https://localhost:5000/api/animals/?name=Benji&species=dog
 ```
-
 #### Sample JSON Response
 ```
 {
@@ -144,16 +125,13 @@ https://localhost:5000/api/animals/?name=Benji&species=dog
 ### ✉️ Contact and Support
 
 If you have any feedback or concerns, please contact Janet Karpenske via Github.
-
 ------------------------------
-
 ### ⚖️ License
-
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Copyright (c) 2020 Janet Karpenske. All Rights Reserved.
 ```
 MIT License
 
-Copyright (c) 2020 Jeff Dinsmore, Janet Karpenske, Johnny Duverseau, & Chloe Hellberg.
+Copyright (c) 2020 Janet Karpenske.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

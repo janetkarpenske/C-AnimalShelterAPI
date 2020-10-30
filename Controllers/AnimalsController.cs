@@ -16,8 +16,7 @@ namespace AnimalShelter.Controllers
     {
       _db = db;
     }
-
-  [HttpGet] //Get all animals functionality
+  [HttpGet]
     public ActionResult<IEnumerable<Animal>> Get(string species, string name, string breed, int age, int page, int size)
     {
       var query = _db.Animals.AsQueryable();
@@ -51,37 +50,32 @@ namespace AnimalShelter.Controllers
       }
       return query.ToList();
     }
-  
-  [HttpPost] //Add animal functionality
+  [HttpPost]
     public void Post([FromBody] Animal animal)
     {
       _db.Animals.Add(animal);
       _db.SaveChanges();
     }
-
-  [HttpGet("{id}")] //Get by id functionality
+  [HttpGet("{id}")]
   public ActionResult<Animal> Get(int id)
   {
       return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
   }
-
-  [HttpGet("random")] //Gets animal randomly
+  [HttpGet("random")]
   public ActionResult<Animal> Get()
   {
     System.Random random = new System.Random();
     int randId = random.Next(1, _db.Animals.Count());
       return _db.Animals.FirstOrDefault(entry => entry.AnimalId == randId);
   }
-
-  [HttpPut("{id}")] //Edit Functionality
+  [HttpPut("{id}")]
     public void Put(int id, [FromBody] Animal animal)
     {
         animal.AnimalId = id;
         _db.Entry(animal).State = EntityState.Modified;
         _db.SaveChanges();
     }
-
-  [HttpDelete("{id}")] //delete functionality
+  [HttpDelete("{id}")]
     public void Delete(int id)
     {
       var animalToDelete = _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
