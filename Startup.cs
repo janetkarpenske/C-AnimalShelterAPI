@@ -27,7 +27,7 @@ namespace AnimalShelter
 
             services.AddSwaggerGen(c => //next 3 lines added for swagger
             {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Janet Karpenske's Animal Shelter API", Version = "v1" });
             });
         }
 

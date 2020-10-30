@@ -65,6 +65,14 @@ namespace AnimalShelter.Controllers
       return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
   }
 
+  [HttpGet("random")] //Gets animal randomly
+  public ActionResult<Animal> Get()
+  {
+    System.Random random = new System.Random();
+    int randId = random.Next(1, _db.Animals.Count());
+      return _db.Animals.FirstOrDefault(entry => entry.AnimalId == randId);
+  }
+
   [HttpPut("{id}")] //Edit Functionality
     public void Put(int id, [FromBody] Animal animal)
     {
