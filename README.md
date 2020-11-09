@@ -90,7 +90,7 @@ For full documentation and to explore the Animal Shelter API endpoints with NSwa
 The Animal Shelter API returns a default of 5 results per page at a time.
 ..........................................................................................
 ### Endpoints
-Base URL: `https://localhost:5000`
+Base URL: `http://localhost:5000`
 ### Animals
 Access information about animals in the animal shelter.
 #### HTTP Request
@@ -105,11 +105,11 @@ DELETE /api/animals/{id}
 | Parameter | Type | Default | Required | Description |
 | :---: | :---: | :---: | :---: | --- |
 | name | string | none | false | Return matches by name.
-| ingredient | string | none | false | Return any recipe with a specific ingredient. |
+| Benji | string | none | false | Return any animal with the name Benji. |
 
 #### Example Query
 ```
-https://localhost:5000/api/animals/?name=Benji&species=dog
+http://localhost:5000/api/animals/?name=Benji&species=dog
 ```
 #### Sample JSON Response
 ```
